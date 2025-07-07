@@ -1,0 +1,26 @@
+[
+  {
+    "name": "samuel",
+    "email": "it.admin@example.com",
+    "password": "admin123",
+    "category": "IT"
+  },
+  {
+    "name": "ebuka",
+    "email": "hr.admin@example.com",
+    "password": "admin123",
+    "category": "HR"
+  },
+  {
+    "name": "grace",
+    "email": "support.admin@example.com",
+    "password": "admin123",
+    "category": "Support"
+  },
+  {
+    "name": "goodluck",
+    "email": "sales.admin@example.com",
+    "password": "admin123",
+    "category": "Sales"
+  }
+]

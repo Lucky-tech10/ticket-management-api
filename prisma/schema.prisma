@@ -1,0 +1,30 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Admin {
+  id        String      @id @default(uuid()) @map("_id")
+  name      String
+  email   String @unique
+  password String
+  category    String
+  createdAt  DateTime   @default(now())
+  updatedAt  DateTime   @updatedAt
+  tickets Ticket[] @relation("AdminTickets")
+}
+
+model Ticket {
+  id        String      @id @default(uuid()) @map("_id")
+  title   String
+  description    String?
+  category   String
+  status  String @default("open")
+  admins      Admin[]   @relation("AdminTickets")
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
